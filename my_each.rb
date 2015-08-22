@@ -7,4 +7,3 @@ def my_each(arr)
   arr
 end
 
-my_each
