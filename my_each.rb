@@ -1,3 +1,6 @@
-def my_each # put argument(s) here
-  # code here
+def my_each (words)
+  words.map do |word|
+    puts word.length
+  end
+  return words
 end
