@@ -1,3 +1,15 @@
-def my_each # put argument(s) here
-  # code here
+
+
+
+
+def my_each(array)
+  x = 0
+  while x < array.length 
+    yield(array[x])
+    x += 1
+  end
+  array
 end
+
+
+my_each(['hi', 'hello', 'bye', 'goodbye']) {|word| puts "Say #{word}"}
