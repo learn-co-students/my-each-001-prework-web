@@ -1,3 +1,6 @@
-def my_each # put argument(s) here
-  # code here
+def my_each(array)
+  for num in array
+    puts num
+  end
 end
+
