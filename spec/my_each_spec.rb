@@ -12,13 +12,6 @@ describe "my_each" do
     end
   end
 
-  it "does not call on while or puts" do 
-    file = File.read('./my_each.rb')
-    contents = file.split(" ")
-    expect(contents).to_not include("while" || "puts")
-  end
-
-
   it "iterates over each element" do
     words = ['hi', 'hello', 'bye', 'goodbye']
 
