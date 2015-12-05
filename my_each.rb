@@ -1,12 +1,12 @@
-def my_each(array)
+def my_each(array, &block)
   i = 0
   while i < array.length do
     item = array[i]
-    yield item
-    #puts array[i]
+    if block_given?
+      yield item
+    end
     i += 1
   end
   array
 end
 
-my_each() {|item| puts item}
