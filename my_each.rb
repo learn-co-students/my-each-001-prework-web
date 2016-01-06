@@ -8,7 +8,4 @@ def my_each(array)
 end
 
 tas = ['Mike','Jack','Jhon', 'Meggie']
-
-my_each(tas) do |ta|
-  "#{ta} is awesome"
-end
+ 
