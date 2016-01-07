@@ -1,19 +1,7 @@
-def my_each (input)# put argument(s) here
-  # code here
-  # if input.kind_of?(Array)
-  #  n=0
-  #   until n==input.length
-  #     yield input[n]
-  #     n+=1
-  #   end
-  # else
-  #   # input.join
-  # end
-  # input
-  
-  x= input.length
-  x.times do |i|
-    yield input[i]
+def my_each (array)  
+  num = array.length
+  num.times do |x|
+    yield array[x]
   end
-  input  
+  array  
 end
