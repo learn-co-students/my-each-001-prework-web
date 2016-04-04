@@ -53,6 +53,20 @@ describe "my_each" do
     expect(saved_block).to_not raise_error
   end
 
+  it "returned array contains the same elements as the original collection" do
+    tas = ['arel', 'jon', 'logan', 'spencer']
+    # array may be modified by the iteration function so
+    # we cannot use it for verifying the results
+    # therefore we create a new copy using the clone method
+    tas_original = tas.clone
+
+    # run the method
+    # check if it returns correct values
+    expect(my_each(tas) do |ta|
+      # Do nothing on yield
+    end).to contain_exactly('arel', 'jon', 'logan', 'spencer')
+
+  end
 
   it "does not modify the original collection" do
     tas = ['arel', 'jon', 'logan', 'spencer']
