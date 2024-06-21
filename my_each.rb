@@ -1,3 +1,7 @@
-def my_each # put argument(s) here
-  # code here
+def my_each (array)  
+  num = array.length
+  num.times do |x|
+    yield array[x]
+  end
+  array  
 end
